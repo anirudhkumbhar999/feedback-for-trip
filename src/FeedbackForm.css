@@ -1,0 +1,159 @@
+/* src/FeedbackForm.css */
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/WhatsApp\ Image\ 2025-07-27\ at\ 6.12.15\ PM.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 2rem 1rem;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+form {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.intro-text {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #d1d1d1;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #66ccff;
+  box-shadow: 0 0 8px rgba(102, 204, 255, 0.5);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: rgba(0, 123, 255, 0.85);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: rgba(0, 123, 255, 1);
+  transform: scale(1.02);
+}
+
+.submissions-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.submission-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  color: #f0f0f0;
+}
+
+.submission-card h3 {
+  color: #ffffff;
+  margin-top: 0;
+  border-bottom: 2px solid #66ccff;
+  padding-bottom: 0.5rem;
+}
+
+.submission-item {
+  margin-top: 1rem;
+}
+
+.submission-item strong {
+  color: #ffffff;
+}
+
+.submission-item p {
+  margin: 0.3rem 0 0 0;
+  padding-left: 1rem;
+  border-left: 3px solid #66ccff;
+  color: #e0e0e0;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .submissions-container {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+}
