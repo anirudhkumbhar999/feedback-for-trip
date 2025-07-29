@@ -36,7 +36,13 @@ function FeedbackForm() {
     setFormData(initialFormData);
   };
 
+  // NEW: Function to handle deleting a submission by its ID
+  const handleDelete = (idToDelete) => {
+    setSubmissions(submissions.filter((submission) => submission.id !== idToDelete));
+  };
+
   return (
+    // NOTE: I've kept your original div wrapper and will provide CSS for it.
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <h1>Your Epic Adventure Debrief! 🚀</h1>
@@ -186,6 +192,10 @@ function FeedbackForm() {
         ) : (
           submissions.map((sub) => (
             <div key={sub.id} className="submission-card">
+              {/* NEW: Delete button added here */}
+              <button onClick={() => handleDelete(sub.id)} className="delete-btn">
+                &times;
+              </button>
               <h3>Debrief by: {sub.name}</h3>
               {Object.keys(sub).map(key => {
                 if (key !== 'name' && key !== 'id' && sub[key]) {
